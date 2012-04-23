@@ -31,6 +31,10 @@ class BribeContractController {
         redirect(action: "show", id: bribeContractInstance.id)
     }
 
+    /**
+     * Updated the contract to set the opportunity completed flag to true
+     * @return
+     */
     def completeOpportunity(){
         def bribeContractInstance = BribeContract.get(params.id)
         if (!bribeContractInstance) {
@@ -41,9 +45,13 @@ class BribeContractController {
         bribeContractInstance.opportunityStatus = true
         bribeContractInstance.save()
 
-        redirect(action: 'show', id: bribeContractInstance.id)
+        redirect(action: params?.view ?: 'show', id: bribeContractInstance.id, params: params)
     }
 
+    /**
+     * Updated the contract to set the bribe completed flag to true
+     * @return
+     */
     def completeBribe(){
         def bribeContractInstance = BribeContract.get(params.id)
         if (!bribeContractInstance) {
@@ -54,9 +62,13 @@ class BribeContractController {
         bribeContractInstance.bribeStatus = true
         bribeContractInstance.save()
 
-        redirect(action: 'show', id: bribeContractInstance.id)
+        redirect(action: params?.view ?: 'show', id: bribeContractInstance.id, params: params)
     }
 
+    /**
+     * Updated the contract to set the opportunity and bribe completed flags to true
+     * @return
+     */
     def completeContract(){
         def bribeContractInstance = BribeContract.get(params.id)
         if (!bribeContractInstance) {
@@ -68,7 +80,7 @@ class BribeContractController {
         bribeContractInstance.opportunityStatus = true
         bribeContractInstance.save()
 
-        redirect(action: 'show', id: bribeContractInstance.id)
+        redirect(action: params?.view ?: 'show', id: bribeContractInstance.id, params: params)
     }
 
     def show() {

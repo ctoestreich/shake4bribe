@@ -6,7 +6,6 @@ import groovy.transform.EqualsAndHashCode
 /**
  * Represents a collection of bribes that are grouped together into come context.
  */
-@ToString
 @EqualsAndHashCode
 class BribePortfolio {
 
@@ -18,5 +17,10 @@ class BribePortfolio {
 
     static constraints = {
         name blank:  false, nullable: false
+    }
+
+    @Override
+    public String toString() {
+        name
     }
 }

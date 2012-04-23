@@ -9,16 +9,16 @@ import javax.xml.bind.annotation.XmlAccessorType
 @XmlAccessorType(XmlAccessType.FIELD)
 enum ItemStatus implements Serializable {
 
-    uncompleted(0),
-    completed(1)
+    uncompleted(false),
+    completed(true)
 
-    private final int value
+    private final Boolean value
 
-    public int value() { return value }
+    public Boolean value() { return value }
 
-    ItemStatus(int value) {this.value = value}
+    ItemStatus(Boolean value) {this.value = value}
 
-    public static ItemStatus getItemStatus(int value) {
+    public static ItemStatus getItemStatus(Boolean value) {
         ItemStatus.values()?.each { itemStatus ->
             if(value == itemStatus.value) {
                 return itemStatus

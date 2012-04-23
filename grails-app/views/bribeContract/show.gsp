@@ -14,9 +14,9 @@
 				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
 				<li><g:link class="list" action="list"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
 				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
-				<li><g:link class="create" action="completeOpportunity">Complete Opportunity</g:link></li>
-				<li><g:link class="create" action="completeBribe">Complete Bribe</g:link></li>
-				<li><g:link class="create" action="completeContract">Complete Contract</g:link></li>
+				<li><g:link class="create" action="completeOpportunity" id="${bribeContractInstance?.id}">Complete Opportunity</g:link></li>
+				<li><g:link class="create" action="completeBribe" id="${bribeContractInstance?.id}">Complete Bribe</g:link></li>
+				<li><g:link class="create" action="completeContract" id="${bribeContractInstance?.id}">Complete Contract</g:link></li>
 			</ul>
 		</div>
 		<div id="show-bribeContract" class="content scaffold-show" role="main">
@@ -53,32 +53,32 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${bribeContractInstance?.bribeStatus}">
+				%{--<g:if test="${bribeContractInstance?.bribeStatus}">--}%
 				<li class="fieldcontain">
 					<span id="bribeStatus-label" class="property-label"><g:message code="bribeContract.bribeStatus.label" default="Bribe Status" /></span>
 					
 						<span class="property-value" aria-labelledby="bribeStatus-label"><g:fieldValue bean="${bribeContractInstance}" field="bribeStatus"/></span>
 					
 				</li>
-				</g:if>
+				%{--</g:if>--}%
 			
-				<g:if test="${bribeContractInstance?.opportunityStatus}">
+				%{--<g:if test="${bribeContractInstance?.opportunityStatus}">--}%
 				<li class="fieldcontain">
 					<span id="opportunityStatus-label" class="property-label"><g:message code="bribeContract.opportunityStatus.label" default="Opportunity Status" /></span>
 					
 						<span class="property-value" aria-labelledby="opportunityStatus-label"><g:fieldValue bean="${bribeContractInstance}" field="opportunityStatus"/></span>
 					
 				</li>
-				</g:if>
+				%{--</g:if>--}%
 			
-				<g:if test="${bribeContractInstance?.contractStatus}">
+				%{--<g:if test="${bribeContractInstance?.contractStatus}">--}%
 				<li class="fieldcontain">
 					<span id="contractStatus-label" class="property-label"><g:message code="bribeContract.contractStatus.label" default="Contract Status" /></span>
 					
 						<span class="property-value" aria-labelledby="contractStatus-label"><g:fieldValue bean="${bribeContractInstance}" field="contractStatus"/></span>
 					
 				</li>
-				</g:if>
+				%{--</g:if>--}%
 			
 			</ol>
 			<g:form>

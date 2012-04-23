@@ -56,6 +56,15 @@
 						<td>${fieldValue(bean: bribeContractInstance, field: "contractStatus")}</td>
 					
 					</tr>
+                  <tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
+                    <td colspan="6">
+                      <g:link class="create" action="completeOpportunity" params="[view:'list']" id="${bribeContractInstance?.id}">Complete Opportunity</g:link>&nbsp;&nbsp;
+                      <g:link class="create" action="completeBribe" params="[view:'list']" id="${bribeContractInstance?.id}">Complete Bribe</g:link>&nbsp;&nbsp;
+                      <g:link class="create" action="completeContract" params="[view:'list']" id="${bribeContractInstance?.id}">Complete Contract</g:link>
+
+                    </td>
+
+                  </tr>
 				</g:each>
 				</tbody>
 			</table>

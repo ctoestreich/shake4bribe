@@ -6,7 +6,6 @@ import groovy.transform.EqualsAndHashCode
 /**
  * A person who will be offered a bribe.
  */
-@ToString
 @EqualsAndHashCode
 class Recipient {
 
@@ -18,5 +17,10 @@ class Recipient {
 
     static constraints = {
         name blank: false, nullable: false
+    }
+
+    @Override
+    public String toString() {
+        name
     }
 }

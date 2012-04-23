@@ -6,7 +6,6 @@ import groovy.transform.EqualsAndHashCode
 /**
  * Represents the action that needs to be performed to receive a bribe.
  */
-@ToString
 @EqualsAndHashCode
 class Opportunity {
 
@@ -21,5 +20,10 @@ class Opportunity {
     static constraints = {
         name blank: false, nullable: false
         description blank: false, nullable: false
+    }
+
+    @Override
+    public String toString() {
+        name
     }
 }
