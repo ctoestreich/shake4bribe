@@ -1,5 +1,5 @@
 
-<%@ page import="com.team4.s4b.Opportunity" %>
+<%@ page import="com.team4.s4b.domain.Opportunity" %>
 <!doctype html>
 <html>
 	<head>

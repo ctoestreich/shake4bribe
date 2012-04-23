@@ -1,4 +1,4 @@
-<%@ page import="com.team4.s4b.Bribe" %>
+<%@ page import="com.team4.s4b.domain.Bribe" %>
 <!doctype html>
 <html>
 	<head>

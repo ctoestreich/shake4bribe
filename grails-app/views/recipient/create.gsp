@@ -1,4 +1,4 @@
-<%@ page import="com.team4.s4b.Recipient" %>
+<%@ page import="com.team4.s4b.domain.Recipient" %>
 <!doctype html>
 <html>
 	<head>

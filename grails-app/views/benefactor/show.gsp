@@ -1,5 +1,5 @@
 
-<%@ page import="com.team4.s4b.Benefactor" %>
+<%@ page import="com.team4.s4b.domain.Benefactor" %>
 <!doctype html>
 <html>
 	<head>
