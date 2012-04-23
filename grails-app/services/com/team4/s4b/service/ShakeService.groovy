@@ -1,21 +1,20 @@
 package com.team4.s4b.service
 
 import com.team4.s4b.exception.BribeShakeException
-import com.team4.s4b.domain.Bribe
-import com.team4.s4b.domain.BribePortfolio
-import com.team4.s4b.domain.Benefactor
-import com.team4.s4b.domain.Recipient
-import com.team4.s4b.domain.BribeContract
+import com.team4.s4b.domain.*
 
+/**
+ * Transactional boundary service for doing shakes and creating contracts in one atomic action.
+ */
 class ShakeService {
 
     /**
      * Will return a random bribe from a portfolio taking probability and count into account.
-     *<BR>
+     * <BR>
      * If the usage count is -1 (unlimited) or > 0, then each bribe will exist bribe.probability times in the list.
      * If two bribes with counts != 0 are in the portfolio one with [b1] bribe.probability=3 and the other one with
      * [b2] bribe.probability=1, the map will look like the following: [b1, b1, b1, b2].
-     *<BR>
+     * <BR>
      * A random number between 0 and the list.size() is selected and the list.get(random) bribe is returned.
      * This will also mark the bribe as used by calling useBribe(Bribe) to decrement the usage count (if not unlimited).
      * <br>
@@ -43,20 +42,30 @@ class ShakeService {
             throw new BribeShakeException("Could not load bribe from bribe list")
         }
 
-        useBribe(bribe)
-        createContract(bribe, bribePortfolio, benefactor, recipient)
+        try {
+            useBribe(bribe)
+            createContract(bribe, bribePortfolio, benefactor, recipient)
+        } catch(Exception ex) {
+            throw new BribeShakeException(ex)
+        }
 
         bribe
     }
 
-    private void createContract(Bribe bribe, BribePortfolio bribePortfolio, Benefactor benefactor, Recipient recipient){
+    /**
+     * Method will create and persist a contract give a bribe and/or portfolio and benefactor and recipient.
+     * @param bribe Bribe to create contract against
+     * @param bribePortfolio Portfolio to create contract against
+     * @param benefactor Benefactor to create contract against
+     * @param recipient Recipient to create contract against
+     */
+    private void createContract(Bribe bribe, BribePortfolio bribePortfolio, Benefactor benefactor, Recipient recipient) {
         new BribeContract(bribePortfolio: bribePortfolio, bribe: bribe, benefactor: benefactor, recipient: recipient).save()
     }
 
     /**
      * Method that will decrement the availableCount and save the bribe
-     * @param bribe
-     * @return
+     * @param bribe Bribe to update adn persist
      */
     private void useBribe(Bribe bribe) {
         if(bribe.availableCount > 0) {

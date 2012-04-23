@@ -5,6 +5,12 @@ package com.team4.s4b.exception
  */
 class BribeShakeException extends Exception {
 
+
+    BribeShakeException(Exception exception){
+        super(exception)
+    }
+
+
     BribeShakeException(String message){
         super(message)
     }
