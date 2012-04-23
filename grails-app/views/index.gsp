@@ -11,7 +11,7 @@
 <g:link name="shake" controller="shake" action="index"><B>Shake 4 Bribe</B></g:link><BR><br>
 <g:link controller="benefactor" action="list">Manage Data</g:link>&nbsp;|&nbsp;<g:link controller="bribeContract" action="list">Bribe Contracts</g:link>&nbsp;|&nbsp;<g:link controller="data" action="reset">Reset Database</g:link>
   <BR><BR>
-  <g:link url="/docs/index.html">JavaDocs</g:link>
+  <g:link url="/docs/gapi/index.html"><b><i>Code Docs</i></b></g:link>
 </p>
 </body>
 </html>
