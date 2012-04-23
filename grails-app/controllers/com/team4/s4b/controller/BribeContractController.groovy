@@ -31,6 +31,46 @@ class BribeContractController {
         redirect(action: "show", id: bribeContractInstance.id)
     }
 
+    def completeOpportunity(){
+        def bribeContractInstance = BribeContract.get(params.id)
+        if (!bribeContractInstance) {
+            flash.message = message(code: 'default.not.found.message', args: [message(code: 'bribeContract.label', default: 'BribeContract'), params.id])
+            redirect(action: "list")
+            return
+        }
+        bribeContractInstance.opportunityStatus = true
+        bribeContractInstance.save()
+
+        redirect(action: 'show', id: bribeContractInstance.id)
+    }
+
+    def completeBribe(){
+        def bribeContractInstance = BribeContract.get(params.id)
+        if (!bribeContractInstance) {
+            flash.message = message(code: 'default.not.found.message', args: [message(code: 'bribeContract.label', default: 'BribeContract'), params.id])
+            redirect(action: "list")
+            return
+        }
+        bribeContractInstance.bribeStatus = true
+        bribeContractInstance.save()
+
+        redirect(action: 'show', id: bribeContractInstance.id)
+    }
+
+    def completeContract(){
+        def bribeContractInstance = BribeContract.get(params.id)
+        if (!bribeContractInstance) {
+            flash.message = message(code: 'default.not.found.message', args: [message(code: 'bribeContract.label', default: 'BribeContract'), params.id])
+            redirect(action: "list")
+            return
+        }
+        bribeContractInstance.bribeStatus = true
+        bribeContractInstance.opportunityStatus = true
+        bribeContractInstance.save()
+
+        redirect(action: 'show', id: bribeContractInstance.id)
+    }
+
     def show() {
         def bribeContractInstance = BribeContract.get(params.id)
         if (!bribeContractInstance) {
