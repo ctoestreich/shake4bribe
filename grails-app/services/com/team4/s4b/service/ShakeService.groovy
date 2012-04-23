@@ -17,9 +17,13 @@ class ShakeService {
      * [b2] bribe.probability=1, the map will look like the following: [b1, b1, b1, b2].
      *<BR>
      * A random number between 0 and the list.size() is selected and the list.get(random) bribe is returned.
-     * This will also mark the bribe as used by calling useBribe(Bribe) to decrement the usage count (if not unlimited)
+     * This will also mark the bribe as used by calling useBribe(Bribe) to decrement the usage count (if not unlimited).
+     * <br>
+     * Will also create a contract for the shake for the given bribe, benefactor and recipient
      *
      * @param bribePortfolio A BribePortfolio on which to run the shake on
+     * @param benefactor A Benefactor on which to create a contract for
+     * @param recipient A Recipient on which to create a contract for
      * @return A bribe from the portfolio
      * @throws BribeShakeException Exception that could occur if no bribes are in the portfolio
      */
