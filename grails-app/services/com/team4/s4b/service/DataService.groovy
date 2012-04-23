@@ -31,5 +31,10 @@ class DataService {
         Bribe.build(name: 'TV', probability: 10, availableCount: -1, bribePortfolio: bp)
         Bribe.build(name: 'Sleepover', probability: 5, availableCount: 3, bribePortfolio: bp)
         Bribe.build(name: 'Pizza', probability: 2, availableCount: 1, bribePortfolio: bp)
+
+        Opportunity.build(name: "Sit Down", description: "Sit Down Now!", benefactor: b)
+        Opportunity.build(name: "Be Quiet", description: "Be Quiet Now!", benefactor: b)
+        Opportunity.build(name: "Play Nice", description: "Play Nice Now!", benefactor: b)
+        Opportunity.build(name: "Do Homework", description: "Do Homework Now!", benefactor: b)
     }
 }

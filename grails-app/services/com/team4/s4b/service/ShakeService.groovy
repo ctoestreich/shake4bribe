@@ -23,10 +23,11 @@ class ShakeService {
      * @param bribePortfolio A BribePortfolio on which to run the shake on
      * @param benefactor A Benefactor on which to create a contract for
      * @param recipient A Recipient on which to create a contract for
+     * @param opportunity The opportunity to perform on which to create a contract for
      * @return A bribe from the portfolio
      * @throws BribeShakeException Exception that could occur if no bribes are in the portfolio
      */
-    Bribe shakeForBribe(BribePortfolio bribePortfolio, Benefactor benefactor, Recipient recipient) throws BribeShakeException {
+    Bribe shakeForBribe(BribePortfolio bribePortfolio, Benefactor benefactor, Recipient recipient, Opportunity opportunity) throws BribeShakeException {
         List<Bribe> listOfBribes = []
         Integer counter = 0
 
@@ -44,7 +45,7 @@ class ShakeService {
 
         try {
             useBribe(bribe)
-            createContract(bribe, bribePortfolio, benefactor, recipient)
+            createContract(bribe, bribePortfolio, benefactor, recipient, opportunity)
         } catch(Exception ex) {
             throw new BribeShakeException(ex)
         }
@@ -58,9 +59,14 @@ class ShakeService {
      * @param bribePortfolio Portfolio to create contract against
      * @param benefactor Benefactor to create contract against
      * @param recipient Recipient to create contract against
+     * @param opportunity Opportunity to create contract against
      */
-    private void createContract(Bribe bribe, BribePortfolio bribePortfolio, Benefactor benefactor, Recipient recipient) {
-        new BribeContract(bribePortfolio: bribePortfolio, bribe: bribe, benefactor: benefactor, recipient: recipient).save()
+    private void createContract(Bribe bribe, BribePortfolio bribePortfolio, Benefactor benefactor, Recipient recipient, Opportunity opportunity) {
+        new BribeContract(bribePortfolio: bribePortfolio,
+                          bribe: bribe,
+                          benefactor: benefactor,
+                          recipient: recipient,
+                          opportunity: opportunity).save()
     }
 
     /**

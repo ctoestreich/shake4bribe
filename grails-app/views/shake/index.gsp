@@ -21,6 +21,7 @@
     Benefactor: ${benefactor.name}<br>
     Bribe Portfolio: <g:select name="bribeportfolio.id" from="${benefactor.bribePortfolios}" optionKey="id" optionValue="name"/><br>
     Recipient: <g:select name="recipient.id" from="${benefactor.recipients}" optionKey="id" optionValue="name"/><br>
+    Opportunity: <g:select name="opportunity.id" from="${benefactor.opportunities}" optionKey="id" optionValue="name"/><br>
     <BR><BR>
 
     <p align="center"><g:submitButton style="width:150px; height: 50px" name="shake" title="Shake" value="  Shake!  "/></p>
