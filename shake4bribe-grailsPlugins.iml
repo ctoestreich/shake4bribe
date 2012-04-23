@@ -24,18 +24,13 @@
       <sourceFolder url="file://$USER_HOME$/.grails/2.0.3/projects/shake4bribe/plugins/build-test-data-2.0.2/grails-app/i18n" isTestSource="false" />
       <sourceFolder url="file://$USER_HOME$/.grails/2.0.3/projects/shake4bribe/plugins/build-test-data-2.0.2/grails-app/services" isTestSource="false" />
     </content>
-    <content url="file://$USER_HOME$/.grails/2.0.3/projects/shake4bribe/plugins/cloud-support-1.0.8">
-      <sourceFolder url="file://$USER_HOME$/.grails/2.0.3/projects/shake4bribe/plugins/cloud-support-1.0.8/src/groovy" isTestSource="false" />
+    <content url="file://$USER_HOME$/.grails/2.0.3/projects/shake4bribe/plugins/cloud-foundry-1.2.1">
+      <sourceFolder url="file://$USER_HOME$/.grails/2.0.3/projects/shake4bribe/plugins/cloud-foundry-1.2.1/src/java" isTestSource="false" />
+      <sourceFolder url="file://$USER_HOME$/.grails/2.0.3/projects/shake4bribe/plugins/cloud-foundry-1.2.1/src/groovy" isTestSource="false" />
+      <sourceFolder url="file://$USER_HOME$/.grails/2.0.3/projects/shake4bribe/plugins/cloud-foundry-1.2.1/grails-app/taglib" isTestSource="false" />
     </content>
-    <content url="file://$USER_HOME$/.grails/2.0.3/projects/shake4bribe/plugins/database-session-1.1.2">
-      <sourceFolder url="file://$USER_HOME$/.grails/2.0.3/projects/shake4bribe/plugins/database-session-1.1.2/src/java" isTestSource="false" />
-      <sourceFolder url="file://$USER_HOME$/.grails/2.0.3/projects/shake4bribe/plugins/database-session-1.1.2/grails-app/jobs" isTestSource="false" />
-      <sourceFolder url="file://$USER_HOME$/.grails/2.0.3/projects/shake4bribe/plugins/database-session-1.1.2/grails-app/domain" isTestSource="false" />
-      <sourceFolder url="file://$USER_HOME$/.grails/2.0.3/projects/shake4bribe/plugins/database-session-1.1.2/grails-app/services" isTestSource="false" />
-    </content>
-    <content url="file://$USER_HOME$/.grails/2.0.3/projects/shake4bribe/plugins/heroku-1.0.1">
-      <sourceFolder url="file://$USER_HOME$/.grails/2.0.3/projects/shake4bribe/plugins/heroku-1.0.1/src/groovy" isTestSource="false" />
-      <sourceFolder url="file://$USER_HOME$/.grails/2.0.3/projects/shake4bribe/plugins/heroku-1.0.1/grails-app/taglib" isTestSource="false" />
+    <content url="file://$USER_HOME$/.grails/2.0.3/projects/shake4bribe/plugins/cloud-support-1.0.9">
+      <sourceFolder url="file://$USER_HOME$/.grails/2.0.3/projects/shake4bribe/plugins/cloud-support-1.0.9/src/groovy" isTestSource="false" />
     </content>
     <content url="file://$USER_HOME$/.grails/2.0.3/projects/shake4bribe/plugins/hibernate-2.0.3">
       <sourceFolder url="file://$USER_HOME$/.grails/2.0.3/projects/shake4bribe/plugins/hibernate-2.0.3/grails-app/i18n" isTestSource="false" />
@@ -61,9 +56,14 @@
     <orderEntry type="library" scope="PROVIDED" name="grails-2.0.3" level="application" />
     <orderEntry type="module-library" exported="">
       <library name="Grails User Library (shake4bribe-grailsPlugins)">
-        <CLASSES />
+        <CLASSES>
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.codehaus.jackson/jackson-mapper-asl/jars/jackson-mapper-asl-1.4.1.jar!/" />
+          <root url="jar://$USER_HOME$/.grails/ivy-cache/org.codehaus.jackson/jackson-core-asl/jars/jackson-core-asl-1.4.1.jar!/" />
+          <root url="file://$USER_HOME$/.grails/2.0.3/projects/shake4bribe/plugins/cloud-foundry-1.2.1/lib" />
+        </CLASSES>
         <JAVADOC />
         <SOURCES />
+        <jarDirectory url="file://$USER_HOME$/.grails/2.0.3/projects/shake4bribe/plugins/cloud-foundry-1.2.1/lib" recursive="false" />
       </library>
     </orderEntry>
   </component>

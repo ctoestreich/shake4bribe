@@ -18,7 +18,7 @@
         <r:layoutResources />
 	</head>
 	<body>
-		<div id="grailsLogo" role="banner">SHAKE 4 BRIBE</div>
+		<div id="grailsLogo" role="banner"><p align="center">SHAKE 4 BRIBE</p></div>
 		<g:layoutBody/>
 		<div class="footer" role="contentinfo"></div>
 		<div id="spinner" class="spinner" style="display:none;"><g:message code="spinner.alt" default="Loading&hellip;"/></div>

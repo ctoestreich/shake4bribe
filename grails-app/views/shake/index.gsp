@@ -13,7 +13,7 @@
 
 <body>
 <div style="padding: 5px">
-  <g:link controller="bribeContract" action="list">Bribe Contracts</g:link>
+  <g:link controller="bribeContract" action="list">Bribe Contracts</g:link>&nbsp;|&nbsp;<g:link controller="data" action="reset">Reset Database</g:link>
   <g:formRemote name="myForm" on404="alert('not found!')" onSuccess="logBribe(data, status)"
                 url="[controller: 'shake', action: 'shake']">
     <g:hiddenField name="benefactor.id" value="${benefactor.id}" />
