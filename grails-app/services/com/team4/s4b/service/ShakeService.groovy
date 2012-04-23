@@ -10,14 +10,14 @@ class ShakeService {
 
     /**
      * Will return a random bribe from a portfolio taking probability and count into account.
-     * <BR>
+     * <BR><BR>
      * If the usage count is -1 (unlimited) or > 0, then each bribe will exist bribe.probability times in the list.
      * If two bribes with counts != 0 are in the portfolio one with [b1] bribe.probability=3 and the other one with
      * [b2] bribe.probability=1, the map will look like the following: [b1, b1, b1, b2].
-     * <BR>
+     * <BR><BR>
      * A random number between 0 and the list.size() is selected and the list.get(random) bribe is returned.
      * This will also mark the bribe as used by calling useBribe(Bribe) to decrement the usage count (if not unlimited).
-     * <br>
+     * <br><BR>
      * Will also create a contract for the shake for the given bribe, benefactor and recipient
      *
      * @param bribePortfolio A BribePortfolio on which to run the shake on
