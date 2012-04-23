@@ -1,0 +1,7 @@
+DefaultPackage
+com.team4.s4b
+com.team4.s4b.controller
+com.team4.s4b.domain
+com.team4.s4b.exception
+com.team4.s4b.service
+spring

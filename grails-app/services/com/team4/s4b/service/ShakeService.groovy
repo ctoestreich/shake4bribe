@@ -50,8 +50,7 @@ class ShakeService {
     }
 
     private void createContract(Bribe bribe, BribePortfolio bribePortfolio, Benefactor benefactor, Recipient recipient){
-        def bribeContract = new BribeContract(bribePortfolio: bribePortfolio, bribe: bribe, benefactor: benefactor, recipient: recipient)
-        bribeContract.save()
+        new BribeContract(bribePortfolio: bribePortfolio, bribe: bribe, benefactor: benefactor, recipient: recipient).save()
     }
 
     /**
