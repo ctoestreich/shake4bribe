@@ -17,7 +17,7 @@ class Bribe {
     /** Hyperlink to external website if bribe exists on the web. */
     String link
     /** A picture of the bribe */
-    Byte[] picture
+    byte[] picture
     /** Probability that the bribe will occur.  Value will range from 1-100.  Default will be 1. */
     Integer probability = 1
     /** How many of this bribe are available.  Value of -1 means unlimted.  Once 0 is reached this will no longer show up in bribe portfolio shake. */

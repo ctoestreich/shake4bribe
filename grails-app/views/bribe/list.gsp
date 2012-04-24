@@ -28,6 +28,8 @@
 					
 						<g:sortableColumn property="probability" title="${message(code: 'bribe.probability.label', default: 'Probability')}" />
 					
+						<g:sortableColumn property="availableCount" title="${message(code: 'bribe.availableCount.label', default: 'Available Count')}" />
+					
 						<th><g:message code="bribe.bribePortfolio.label" default="Bribe Portfolio" /></th>
 					
 						<g:sortableColumn property="link" title="${message(code: 'bribe.link.label', default: 'Link')}" />
@@ -43,6 +45,8 @@
 						<td><g:link action="show" id="${bribeInstance.id}">${fieldValue(bean: bribeInstance, field: "name")}</g:link></td>
 					
 						<td>${fieldValue(bean: bribeInstance, field: "probability")}</td>
+					
+						<td>${fieldValue(bean: bribeInstance, field: "availableCount")}</td>
 					
 						<td>${fieldValue(bean: bribeInstance, field: "bribePortfolio")}</td>
 					

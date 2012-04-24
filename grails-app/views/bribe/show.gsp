@@ -41,6 +41,15 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${bribeInstance?.availableCount}">
+				<li class="fieldcontain">
+					<span id="availableCount-label" class="property-label"><g:message code="bribe.availableCount.label" default="Available Count" /></span>
+					
+						<span class="property-value" aria-labelledby="availableCount-label"><g:fieldValue bean="${bribeInstance}" field="availableCount"/></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${bribeInstance?.bribePortfolio}">
 				<li class="fieldcontain">
 					<span id="bribePortfolio-label" class="property-label"><g:message code="bribe.bribePortfolio.label" default="Bribe Portfolio" /></span>

@@ -1,4 +1,4 @@
-<%@ page import="com.team4.s4b.domain.BribePortfolio; com.team4.s4b.domain.Bribe" %>
+<%@ page import="com.team4.s4b.domain.Bribe" %>
 
 
 
@@ -18,12 +18,20 @@
 	<g:select name="probability" from="${1..99999}" class="range" required="" value="${fieldValue(bean: bribeInstance, field: 'probability')}"/>
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: bribeInstance, field: 'availableCount', 'error')} required">
+	<label for="availableCount">
+		<g:message code="bribe.availableCount.label" default="Available Count" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:field type="number" name="availableCount" required="" value="${fieldValue(bean: bribeInstance, field: 'availableCount')}"/>
+</div>
+
 <div class="fieldcontain ${hasErrors(bean: bribeInstance, field: 'bribePortfolio', 'error')} required">
 	<label for="bribePortfolio">
 		<g:message code="bribe.bribePortfolio.label" default="Bribe Portfolio" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:select id="bribePortfolio" name="bribePortfolio.id" from="${BribePortfolio.list()}" optionKey="id" required="" value="${bribeInstance?.bribePortfolio?.id}" class="many-to-one"/>
+	<g:select id="bribePortfolio" name="bribePortfolio.id" from="${com.team4.s4b.domain.BribePortfolio.list()}" optionKey="id" required="" value="${bribeInstance?.bribePortfolio?.id}" class="many-to-one"/>
 </div>
 
 <div class="fieldcontain ${hasErrors(bean: bribeInstance, field: 'link', 'error')} ">
