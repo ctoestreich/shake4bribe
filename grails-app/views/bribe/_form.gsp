@@ -42,11 +42,11 @@
 	<g:textField name="link" value="${bribeInstance?.link}"/>
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: bribeInstance, field: 'picture', 'error')} required">
-	<label for="picture">
-		<g:message code="bribe.picture.label" default="Picture" />
-		<span class="required-indicator">*</span>
-	</label>
-	<input type="file" id="picture" name="picture" />
-</div>
+%{--<div class="fieldcontain ${hasErrors(bean: bribeInstance, field: 'picture', 'error')} required">--}%
+	%{--<label for="picture">--}%
+		%{--<g:message code="bribe.picture.label" default="Picture" />--}%
+		%{--<span class="required-indicator">*</span>--}%
+	%{--</label>--}%
+	%{--<input type="file" id="picture" name="picture" />--}%
+%{--</div>--}%
 
