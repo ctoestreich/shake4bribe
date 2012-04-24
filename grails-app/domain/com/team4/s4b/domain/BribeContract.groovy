@@ -5,12 +5,13 @@ import groovy.transform.EqualsAndHashCode
 
 /**
  * Represents the relationship of the Opportunity and Bribe/BribePortfolio to a Benefactor and Recipient.
+ * The bribe portfolio linked to this contract as the bribe may be shaken for on a later date.
  */
 @ToString
 @EqualsAndHashCode
 class BribeContract {
 
-    static belongsTo = [benefactor: Benefactor, recipient: Recipient]
+    static belongsTo = [benefactor: Benefactor, recipient: Recipient, bribePortfolio: BribePortfolio]
 
     /** Boolean indicating whether the bribe has been fulfilled of not for this contract. Defaults to false. */
     Boolean bribeStatus = false
@@ -18,8 +19,6 @@ class BribeContract {
     Boolean opportunityStatus = false
     /** The opportunity linked to this contract. */
     Opportunity opportunity
-    /** The bribe portfolio linked to this contract as the bribe may be shaken for on a later date.  */
-    BribePortfolio bribePortfolio
     /** The bribe associated with the contract.  This data is embedded into the contract and is a copy of the actual bribe. */
     Bribe bribe
 
