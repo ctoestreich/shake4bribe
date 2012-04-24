@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.team4.s4b.controller.ShakeController</OriginalElement>
+  <nodes>
+    <node x="798.0" y="179.0">groovy.lang.GroovyObjectSupport</node>
+    <node x="231.0" y="440.0">com.team4.s4b.controller.BenefactorController</node>
+    <node x="693.0" y="440.0">com.team4.s4b.controller.BribeController</node>
+    <node x="1155.0" y="519.5">com.team4.s4b.controller.DataController</node>
+    <node x="1322.0" y="440.0">com.team4.s4b.controller.OpportunityController</node>
+    <node x="798.0" y="0.0">groovy.lang.GroovyObject</node>
+    <node x="924.0" y="440.0">com.team4.s4b.controller.BribePortfolioController</node>
+    <node x="1553.0" y="509.5">com.team4.s4b.controller.ShakeController</node>
+    <node x="462.00000000000006" y="410.0">com.team4.s4b.controller.BribeContractController</node>
+    <node x="0.0" y="440.0">com.team4.s4b.controller.RecipientController</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.team4.s4b.controller.RecipientController" target="groovy.lang.GroovyObject">
+      <point x="-52.75" y="-124.5" />
+      <point x="52.75" y="129.0" />
+      <point x="810.8888888888889" y="129.0" />
+      <point x="-103.11111111111109" y="54.5" />
+    </edge>
+    <edge source="com.team4.s4b.controller.RecipientController" target="groovy.lang.GroovyObjectSupport">
+      <point x="52.75" y="-124.5" />
+      <point x="158.25" y="360.0" />
+      <point x="812.5" y="360.0" />
+      <point x="-101.5" y="75.5" />
+    </edge>
+    <edge source="com.team4.s4b.controller.BribeContractController" target="groovy.lang.GroovyObject">
+      <point x="-52.75" y="-154.5" />
+      <point x="514.75" y="149.0" />
+      <point x="862.4444444444446" y="149.0" />
+      <point x="-51.55555555555554" y="54.5" />
+    </edge>
+    <edge source="com.team4.s4b.controller.ShakeController" target="groovy.lang.GroovyObject">
+      <point x="38.25" y="-55.0" />
+      <point x="1667.75" y="129.0" />
+      <point x="1017.1111111111111" y="129.0" />
+      <point x="103.11111111111109" y="54.5" />
+    </edge>
+    <edge source="com.team4.s4b.controller.BribeContractController" target="groovy.lang.GroovyObjectSupport">
+      <point x="52.75" y="-154.5" />
+      <point x="620.25" y="380.0" />
+      <point x="870.5" y="380.0" />
+      <point x="-43.5" y="75.5" />
+    </edge>
+    <edge source="com.team4.s4b.controller.ShakeController" target="groovy.lang.GroovyObjectSupport">
+      <point x="-38.25" y="-55.0" />
+      <point x="1591.25" y="360.0" />
+      <point x="1015.5" y="360.0" />
+      <point x="101.5" y="75.5" />
+    </edge>
+    <edge source="groovy.lang.GroovyObjectSupport" target="groovy.lang.GroovyObject">
+      <point x="0.0" y="-75.5" />
+      <point x="0.0" y="54.5" />
+    </edge>
+    <edge source="com.team4.s4b.controller.BenefactorController" target="groovy.lang.GroovyObjectSupport">
+      <point x="52.75" y="-124.5" />
+      <point x="389.25" y="370.0" />
+      <point x="841.5" y="370.0" />
+      <point x="-72.5" y="75.5" />
+    </edge>
+    <edge source="com.team4.s4b.controller.BribeController" target="groovy.lang.GroovyObjectSupport">
+      <point x="52.75" y="-124.5" />
+      <point x="851.25" y="390.0" />
+      <point x="899.5" y="390.0" />
+      <point x="-14.5" y="75.5" />
+    </edge>
+    <edge source="com.team4.s4b.controller.OpportunityController" target="groovy.lang.GroovyObject">
+      <point x="52.75" y="-124.5" />
+      <point x="1480.25" y="139.0" />
+      <point x="991.3333333333334" y="139.0" />
+      <point x="77.33333333333331" y="54.5" />
+    </edge>
+    <edge source="com.team4.s4b.controller.DataController" target="groovy.lang.GroovyObjectSupport">
+      <point x="-36.75" y="-45.0" />
+      <point x="1191.75" y="380.0" />
+      <point x="957.5" y="380.0" />
+      <point x="43.5" y="75.5" />
+    </edge>
+    <edge source="com.team4.s4b.controller.BribePortfolioController" target="groovy.lang.GroovyObject">
+      <point x="52.75" y="-124.5" />
+      <point x="1082.25" y="390.0" />
+      <point x="1085.5" y="390.0" />
+      <point x="1085.5" y="159.0" />
+      <point x="939.7777777777778" y="159.0" />
+      <point x="25.77777777777777" y="54.5" />
+    </edge>
+    <edge source="com.team4.s4b.controller.BribePortfolioController" target="groovy.lang.GroovyObjectSupport">
+      <point x="-52.75" y="-124.5" />
+      <point x="976.75" y="390.0" />
+      <point x="928.5" y="390.0" />
+      <point x="14.5" y="75.5" />
+    </edge>
+    <edge source="com.team4.s4b.controller.OpportunityController" target="groovy.lang.GroovyObjectSupport">
+      <point x="-52.75" y="-124.5" />
+      <point x="1374.75" y="370.0" />
+      <point x="986.5" y="370.0" />
+      <point x="72.5" y="75.5" />
+    </edge>
+    <edge source="com.team4.s4b.controller.DataController" target="groovy.lang.GroovyObject">
+      <point x="36.75" y="-45.0" />
+      <point x="1265.25" y="149.0" />
+      <point x="965.5555555555557" y="149.0" />
+      <point x="51.55555555555554" y="54.5" />
+    </edge>
+    <edge source="com.team4.s4b.controller.BenefactorController" target="groovy.lang.GroovyObject">
+      <point x="-52.75" y="-124.5" />
+      <point x="283.75" y="139.0" />
+      <point x="836.6666666666667" y="139.0" />
+      <point x="-77.33333333333337" y="54.5" />
+    </edge>
+    <edge source="com.team4.s4b.controller.BribeController" target="groovy.lang.GroovyObject">
+      <point x="-52.75" y="-124.5" />
+      <point x="745.75" y="350.0" />
+      <point x="742.5" y="350.0" />
+      <point x="742.5" y="159.0" />
+      <point x="888.2222222222222" y="159.0" />
+      <point x="-25.77777777777783" y="54.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.7090663058186739" x="871.3788167938931" y="388.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Constructors</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
