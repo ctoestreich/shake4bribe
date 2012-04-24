@@ -13,6 +13,6 @@ class BribeService {
         if(bribe.availableCount > 0) {
             bribe.availableCount -= 1
         }
-        bribe.save(flush: true)
+        bribe.save()
     }
 }

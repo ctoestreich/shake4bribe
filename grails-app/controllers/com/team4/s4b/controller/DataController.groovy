@@ -10,9 +10,9 @@ class DataController {
     /**
      * Method to reset the data on the fly for testing the application
      */
-    void reset() {
+    def reset() {
         dataService.populateData()
 
-        forward(controller: 'shake')
+        forward(controller: 'shake', action: 'index')
     }
 }
